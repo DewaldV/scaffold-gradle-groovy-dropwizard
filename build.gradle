@@ -1,11 +1,47 @@
-apply plugin: 'idea'
 apply plugin: 'groovy'
+apply plugin: 'eu.appsatori.fatjar'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = 'com.dewaldv.scaffold.ScaffoldApplication'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
+    }
+}
+
+project.ext {
+    dropwizardVersion = '0.7.0'
+    dropWizardConfig = './src/main/resources/scaffold.yaml'
+}
+
+fatJar {
+    classifier 'fat'
+    exclude 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.SF'
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+run {
+    args 'server', dropWizardConfig
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: dropwizardVersion
     compile 'org.codehaus.groovy:groovy-all:2.3.3'
+    compile 'com.sun.jersey:jersey-client:1.18.1'
     testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-all:1.9.5'
 }
