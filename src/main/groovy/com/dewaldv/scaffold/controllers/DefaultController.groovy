@@ -15,6 +15,6 @@ class DefaultController {
 
     @GET
     DefaultResponse get() {
-        return new DefaultResponse(counter++, "Hello World")
+        return new DefaultResponse(counter, "Hello World")
     }
 }
