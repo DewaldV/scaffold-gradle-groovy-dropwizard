@@ -39,9 +39,9 @@ repositories {
 }
 
 dependencies {
-    compile group: 'io.dropwizard', name: 'dropwizard-core', version: dropwizardVersion
-    compile 'org.codehaus.groovy:groovy-all:2.3.3'
+    compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
     compile 'com.sun.jersey:jersey-client:1.18.1'
+    compile 'org.codehaus.groovy:groovy-all:2.3.3'
     testCompile 'junit:junit:4.11'
     testCompile 'org.mockito:mockito-all:1.9.5'
 }
