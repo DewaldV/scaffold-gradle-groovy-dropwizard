@@ -1,7 +1,6 @@
 scaffold
 ========
-
-Just a simple scaffolding for a gradle-groovy-dropwizard stack
+[![Build Status](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master/build_image)](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master)
 
 ##Running
 * To test: gradle test
