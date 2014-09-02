@@ -5,16 +5,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 mainClassName = 'com.dewaldv.scaffold.ScaffoldApplication'
 
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'eu.appsatori:gradle-fatjar-plugin:0.3'
-    }
-}
-
 project.ext {
     dropwizardVersion = '0.7.0'
     dropWizardConfig = './src/main/resources/scaffold.yaml'
