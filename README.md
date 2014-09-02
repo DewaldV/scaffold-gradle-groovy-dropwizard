@@ -4,9 +4,9 @@ scaffold
 Just a simple scaffolding for a gradle-groovy-dropwizard stack
 
 ##Running
-* To run: gradle run
 * To test: gradle test
-* To compile fat jar: gradle fatJar
+* To run local: gradle run
+* To deploy to vagrant and start: gradle vagrantRun
 
 Output will be in ./build/libs/
 
