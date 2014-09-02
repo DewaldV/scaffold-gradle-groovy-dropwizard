@@ -8,3 +8,6 @@ gradle.properties
 /*.ipr
 /*.iws
 .idea/
+
+#Vagrant
+.vagrant/
