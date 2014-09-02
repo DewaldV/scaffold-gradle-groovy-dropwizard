@@ -17,7 +17,7 @@ class ScaffoldApplication extends Application<ScaffoldConfiguration> {
     }
 
     @Override
-    void run(ScaffoldConfiguration configuration, Environment environment) throws Exception {
+    void run(ScaffoldConfiguration configuration, Environment environment) {
         environment.jersey().register(DefaultController.class)
     }
 }
