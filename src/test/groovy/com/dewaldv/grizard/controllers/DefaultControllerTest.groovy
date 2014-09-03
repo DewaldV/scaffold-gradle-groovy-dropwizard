@@ -1,4 +1,4 @@
-package com.dewaldv.scaffold.controllers
+package com.dewaldv.grizard.controllers
 
 import org.junit.Test
 

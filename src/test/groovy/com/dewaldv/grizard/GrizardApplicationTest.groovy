@@ -1,6 +1,6 @@
-package com.dewaldv.scaffold
+package com.dewaldv.grizard
 
-import com.dewaldv.scaffold.controllers.DefaultController
+import com.dewaldv.grizard.controllers.DefaultController
 import io.dropwizard.jersey.setup.JerseyEnvironment
 import io.dropwizard.setup.Environment
 import org.junit.Before
@@ -8,9 +8,9 @@ import org.junit.Test
 
 import static org.mockito.Mockito.*
 
-class ScaffoldApplicationTest {
+class GrizardApplicationTest {
 
-    def application = new ScaffoldApplication()
+    def application = new GrizardApplication()
     def envMock = mock(Environment.class)
     def jerseyMock = mock(JerseyEnvironment.class)
 
@@ -21,7 +21,7 @@ class ScaffoldApplicationTest {
 
     @Test
     void shouldRegisterDefaultController() {
-        def conf = new ScaffoldConfiguration()
+        def conf = new GrizardConfiguration()
         application.run(conf, envMock)
         verify(jerseyMock, atLeastOnce()).register(DefaultController.class)
     }

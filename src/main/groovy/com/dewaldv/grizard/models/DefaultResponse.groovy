@@ -1,4 +1,4 @@
-package com.dewaldv.scaffold.models
+package com.dewaldv.grizard.models
 
 
 class DefaultResponse {

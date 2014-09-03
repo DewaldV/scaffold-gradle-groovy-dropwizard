@@ -3,11 +3,11 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-mainClassName = 'com.dewaldv.scaffold.ScaffoldApplication'
+mainClassName = 'com.dewaldv.grizard.ScaffoldApplication'
 
 project.ext {
     dropwizardVersion = '0.7.0'
-    dropWizardConfig = './src/main/resources/scaffold.yaml'
+    dropWizardConfig = './src/main/resources/grizard.yaml'
 }
 
 run {

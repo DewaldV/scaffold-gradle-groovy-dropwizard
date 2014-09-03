@@ -1,6 +1,6 @@
-package com.dewaldv.scaffold.controllers
+package com.dewaldv.grizard.controllers
 
-import com.dewaldv.scaffold.models.DefaultResponse
+import com.dewaldv.grizard.models.DefaultResponse
 
 import javax.ws.rs.GET
 import javax.ws.rs.Path
