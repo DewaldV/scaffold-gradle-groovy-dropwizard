@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-mainClassName = 'com.dewaldv.grizard.ScaffoldApplication'
+mainClassName = 'com.dewaldv.grizard.GrizardApplication'
 
 project.ext {
     dropwizardVersion = '0.7.0'
