@@ -1,6 +1,6 @@
-Grizard - Groovy-Gradle-DropWizard [![Build Status](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master/build_image)](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master)
+Gizzard - Groovy-Gradle-DropWizard [![Build Status](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master/build_image)](https://snap-ci.com/DewaldV/scaffold-gradle-groovy-dropwizard/branch/master)
 ========
-Grizard is a scaffolding project putting together three popular Java technologies: Groovy, Gradle and DropWizard.
+Gizzard is a scaffolding project putting together three popular Java technologies: Groovy, Gradle and DropWizard.
 
 ##Running
 * To test: gradle test

@@ -1,15 +1,15 @@
-package com.dewaldv.grizard.controllers
+package com.dewaldv.gizzard.controllers
 
 import org.junit.Test
 
 import static org.hamcrest.CoreMatchers.is
 import static org.hamcrest.MatcherAssert.assertThat
 
-class DefaultControllerTest {
+class GreetingControllerTest {
 
     @Test
     void shouldReturnDefaultResponse() {
-        def defaultController = new DefaultController()
+        def defaultController = new GreetingController()
         def response = defaultController.get()
         assertThat(response.id, is(0))
         assertThat(response.content, is("Hello World"))
