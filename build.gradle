@@ -1,17 +1,23 @@
 apply plugin: 'groovy'
 apply plugin: 'application'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-mainClassName = 'com.dewaldv.grizard.GrizardApplication'
+mainClassName = 'com.dewaldv.gizzard.GizzardApplication'
 
 project.ext {
-    dropwizardVersion = '0.7.0'
+    dropwizardVersion = '0.8.0'
     dropWizardConfig = './src/main/resources/grizard.yaml'
 }
 
 run {
     args 'server', dropWizardConfig
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "${mainClassName}"
+    }
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 }
 
 repositories {
@@ -20,8 +26,8 @@ repositories {
 
 dependencies {
     compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
-    compile 'com.sun.jersey:jersey-client:1.18.1'
-    compile 'org.codehaus.groovy:groovy-all:2.3.3'
-    testCompile 'junit:junit:4.11'
-    testCompile 'org.mockito:mockito-all:1.9.5'
+//    compile 'com.sun.jersey:jersey-client:1.18.1'
+    compile 'org.codehaus.groovy:groovy-all:2.4.3'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:1.10.19'
 }
