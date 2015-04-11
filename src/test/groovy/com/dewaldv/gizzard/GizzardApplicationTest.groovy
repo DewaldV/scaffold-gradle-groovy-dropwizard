@@ -1,6 +1,6 @@
 package com.dewaldv.gizzard
 
-import com.dewaldv.gizzard.controllers.GreetingController
+import com.dewaldv.gizzard.resources.GreetingResource
 import io.dropwizard.jersey.setup.JerseyEnvironment
 import io.dropwizard.setup.Environment
 import org.junit.Before
@@ -26,6 +26,6 @@ class GizzardApplicationTest {
     void shouldRegisterDefaultController() {
         def conf = new GizzardConfiguration()
         application.run(conf, envMock)
-        verify(jerseyMock, atLeastOnce()).register(GreetingController.class)
+        verify(jerseyMock, atLeastOnce()).register(GreetingResource.class)
     }
 }
