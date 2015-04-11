@@ -1,11 +1,17 @@
-apply plugin: 'groovy'
 apply plugin: 'application'
 
-mainClassName = 'com.dewaldv.gizzard.GizzardApplication'
+repositories {
+    mavenCentral()
+}
 
 project.ext {
-    dropwizardVersion = '0.8.0'
-    dropWizardConfig = './src/main/resources/grizard.yaml'
+    mainClassName = 'com.dewaldv.gizzard.GizzardApplication'
+}
+
+dependencies {
+    compile "io.dropwizard:dropwizard-core:'0.8.0'"
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-all:1.10.19'
 }
 
 run {
@@ -20,13 +26,4 @@ jar {
     targetCompatibility = 1.8
 }
 
-repositories {
-    mavenCentral()
-}
 
-dependencies {
-    compile "io.dropwizard:dropwizard-core:${dropwizardVersion}"
-    compile 'org.codehaus.groovy:groovy-all:2.4.3'
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-all:1.10.19'
-}
